@@ -1,16 +1,30 @@
 function App() {
+  const pieces = [
+    { className: "w-full bg-lime-400 rounded-xl" },
+    { className: "w-full bg-lime-400 rounded-xl" },
+    { className: "w-full bg-lime-400 rounded-xl" },
+    { className: "w-full bg-lime-400 rounded-xl" },
+    { className: "w-full bg-lime-400 rounded-xl" },
+    { className: "w-full bg-lime-400 rounded-xl" },
+    { className: "w-full bg-lime-400 rounded-xl" },
+    { className: "w-full bg-lime-400 rounded-xl" },
+    { className: "w-full col-span-2 bg-stone-900 text-lime-400 rounded-xl" },
+    { className: "w-full col-span-2 bg-stone-900 text-lime-400 rounded-xl" },
+    { className: "w-full col-span-2 bg-stone-900 text-lime-400 rounded-xl" },
+    {
+      className: "w-full col-span-2 row-span-2 bg-lime-400 rounded-xl",
+    },
+  ];
   return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+    <div className="w-screen bg-blue-500 h-dvh">
+      <div className="w-2/3 h-full">
+        <div className="grid grid-cols-4 grid-row-5 gap-2 h-full">
+          {pieces.map((piece) => {
+            return <div className={piece.className}></div>;
+          })}
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   );
 }
 
